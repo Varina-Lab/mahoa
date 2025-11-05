@@ -1,0 +1,24 @@
+[package]
+name = "rust_crypto_cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Thư viện cho SHA-256
+sha2 = "0.10"
+
+# Thư viện cho mã hóa AES
+aes = "0.8"
+
+# Thư viện cho chế độ mã hóa CFB (Cipher Feedback)
+# Đây là phần quan trọng để có thể sử dụng các mode mã hóa
+cfb-mode = "0.8"
+
+# Thư viện chính cung cấp các trait (giao diện) cho mã hóa
+cipher = { version = "0.4", features = ["block-padding"] }
+
+# Thư viện để tạo số ngẫu nhiên (cho IV)
+rand = "0.8"
+
+# Thư viện cho Base64 encoding/decoding
+base64 = "0.21"
